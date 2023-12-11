@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonial Slider</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color:bisque;
+    }
+
+    #testimonial-slider {
+      width: 400px;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid black;
+      color: white;
+      background-color: black;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .testimonial {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .author {
+      font-style: italic;
+      margin-top: 10px;
+    }
+
+    .controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .control-left,
+    .control-right {
+      padding: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div id="testimonial-slider">
+  <div class="slides">
+    <div class="slide">
+      <div class="testimonial">
+        <p>"Web developement is difficult,only when you set your standard is it fun to do."</p>
+        <p class="author">- Providence Tuyishimire</p>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="testimonial">
+        <p>"Web developer without /style is nothing."</p>
+        <p class="author">- Providence Tuyishimire</p>
+      </div>
+    </div>
+    
+  </div>
+  <div class="controls">
+    <div class="control-left" onclick="prevSlide()">❮</div>
+    <div class="control-right" onclick="nextSlide()">❯</div>
+  </div>
+</div>
+
+<script>
+  let currentIndex = 0;
+  const totalSlides = document.querySelectorAll('.slide').length;
+  const slideWidth = document.querySelector('.slide').clientWidth;
+
+  function updateSlider() {
+    document.querySelector('.slides').style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateSlider();
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateSlider();
+  }
+</script>
+</body>
+</html>

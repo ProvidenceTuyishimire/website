@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidebar Menu</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color:aqua;
+      display: flex;
+    }
+
+    #sidebar {
+      width: 250px;
+      height: 100vh;
+      background-color: #333;
+      color: royalblue;
+      padding-top: 20px;
+      position: fixed;
+      transition: 0.3s;
+    }
+
+    #main-content {
+      flex: 1;
+      padding: 20px;
+      transition: margin-left 0.3s;
+    }
+
+    #open-btn, #close-btn {
+      font-size: 20px;
+      cursor: pointer;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+    }
+
+    #close-btn {
+      display: none;
+    }
+
+    #sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    #sidebar li {
+      padding: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #sidebar li:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<div id="sidebar">
+  <button id="open-btn" onclick="openSidebar()">☰ Open</button>
+  <button id="close-btn" onclick="closeSidebar()">✕ Close</button>
+  <ul>
+    <li onclick="changeContent('Home')">Home</li>
+    <li onclick="changeContent('About')">About</li>
+    <li onclick="changeContent('Services')">Services</li>
+    <li onclick="changeContent('Contact')">Contact</li>
+  </ul>
+</div>
+
+<div id="main-content">
+  <h1>Welcome to the Home Page</h1>
+  <p>This is the main content area.</p>
+</div>
+
+<script>
+  function openSidebar() {
+    document.getElementById("sidebar").style.width = "250px";
+    document.getElementById("main-content").style.marginLeft = "250px";
+    document.getElementById("open-btn").style.display = "none";
+    document.getElementById("close-btn").style.display = "block";
+  }
+
+  function closeSidebar() {
+    document.getElementById("sidebar").style.width = "0";
+    document.getElementById("main-content").style.marginLeft = "0";
+    document.getElementById("open-btn").style.display = "block";
+    document.getElementById("close-btn").style.display = "none";
+  }
+
+  function changeContent(content) {
+    document.getElementById("main-content").innerHTML = `<h1>Welcome to the ${content} Page</h1>`;
+  }
+</script>
+</body>
+</html>

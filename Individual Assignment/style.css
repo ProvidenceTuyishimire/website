@@ -1,0 +1,165 @@
+.me{
+    background-color:black;
+    color: white;
+    width:1450px;
+    height:50px;
+    padding: 0px;
+    border-radius: 60px;
+   }
+ul{
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    float: right;
+    }
+li a{
+    color:white;
+    
+    margin: 50px;
+    text-decoration: none;
+    
+    padding: 10px;
+    
+}
+img{
+    width: 50px;
+    height: 50px;
+    border-radius: 60px;
+}
+.hover {
+    color: red;
+    background-color:whitesmoke;
+}
+body{
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px;
+            }
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        .login-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+          }
+
+          .dropdown-button {
+            padding: 10px;
+            background-color:gold;
+            color:black;
+            border: none;
+            cursor: pointer;
+          }
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+          }
+          .dropdown-item {
+            padding: 12px;
+            display: block;
+            text-decoration: none;
+            color: #333;
+          }
+          .dropdown-item:hover {
+            background-color: #ddd;
+          }
+          
